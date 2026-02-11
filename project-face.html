@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人臉辨識打卡系統 | 呂韋勳 Leo</title>
+    <meta name="description" content="人臉辨識打卡系統 - 基於 OpenCV 的即時考勤解決方案。結合自動偵測、身份識別與數據記錄功能。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ri-terminal-box-line logo-icon"></i>
+                Leo<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">首頁</a></li>
+                    <li><a href="index.html#about" class="nav-link">關於我</a></li>
+                    <li><a href="index.html#projects" class="nav-link">精選作品</a></li>
+                    <li><a href="index.html#skills" class="nav-link">技能</a></li>
+                    <li><a href="index.html#contact" class="nav-link btn-contact">聯絡我</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="ri-moon-line"></i>
+            </button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link"><i class="ri-arrow-left-line"></i> 返回作品列表</a>
+            <h1 class="project-detail-title">人臉辨識打卡系統</h1>
+            <div class="project-meta">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">System Design</span>
+                <span class="tag">OpenCV</span>
+            </div>
+            <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
+                基於 OpenCV 的即時人臉辨識解決方案，實現無接觸式自動化考勤管理。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Showcase Image/Video -->
+            <div class="project-showcase">
+                <div class="placeholder-project color-3" style="height: 500px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 1.5rem; color: #555;">[ 辨識介面與後台管理展示 ]</span>
+                </div>
+            </div>
+
+            <div class="project-content-block">
+                <div class="content-section">
+                    <h3>專案簡介</h3>
+                    <p>
+                        傳統的打卡方式（如卡片、指紋）存在代打卡或衛生疑慮。本專案開發了一套低成本、高效率的人臉辨識打卡系統，適用於中小型企業或教室場景。系統能即時捕捉鏡頭畫面，自動偵測並識別註冊人員，完成打卡記錄。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>功能特色</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name"><strong>即時人臉偵測與識別</strong></div>
+                            <p>應用 Haar Cascade 分類器進行快速人臉偵測，並結合 LBPH (Local Binary Patterns Histograms) 或深度學習模型進行特徵比對與身份識別。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>自動化考勤記錄</strong></div>
+                            <p>識別成功後，系統自動將員工 ID、姓名與打卡時間寫入 JSON 或 CSV 格式的資料庫，方便後續匯出與薪資計算。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>防偽機制（基礎）</strong></div>
+                            <p>透過活體檢測（Liveness Detection）的基礎邏輯，防止使用照片或影片進行惡意欺騙。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>技術細節</h3>
+                    <div class="project-tech" style="border: none; padding-top: 0; margin-bottom: 20px;">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>NumPy</span>
+                        <span>JSON / CSV</span>
+                    </div>
+                    <p>
+                        核心演算法基於 OpenCV 函式庫開發。系統流程包含：影像前處理（灰階化、直方圖均化）、特徵提取、模型訓練與即時推論。資料儲存採用輕量化的 JSON 格式，便於系統移植與快速部署。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>挑戰與優化</h3>
+                    <p>
+                        開發過程中最大的挑戰在於光線變化對辨識準確率的影響。透過加入影像增強預處理步驟，顯著提升了在昏暗或背光環境下的辨識率。此外，也優化了程式碼結構，確保在一般筆記型電腦上也能達到流暢的 FPS 表現。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

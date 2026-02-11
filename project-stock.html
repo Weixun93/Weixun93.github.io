@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票自動化分析平台 | 呂韋勳 Leo</title>
+    <meta name="description" content="股票自動化分析平台 - 提供互動式 K 棒圖表與歷史數據分析功能。整合金融 API 與網頁視覺化技術。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ri-terminal-box-line logo-icon"></i>
+                Leo<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">首頁</a></li>
+                    <li><a href="index.html#about" class="nav-link">關於我</a></li>
+                    <li><a href="index.html#projects" class="nav-link">精選作品</a></li>
+                    <li><a href="index.html#skills" class="nav-link">技能</a></li>
+                    <li><a href="index.html#contact" class="nav-link btn-contact">聯絡我</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="ri-moon-line"></i>
+            </button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link"><i class="ri-arrow-left-line"></i> 返回作品列表</a>
+            <h1 class="project-detail-title">股票自動化分析平台</h1>
+            <div class="project-meta">
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Web Dev</span>
+                <span class="tag">Automation</span>
+            </div>
+            <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
+                整合金融 API 的全方位股票分析工具，將繁雜的數據轉化為直觀的互動式圖表。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Showcase Image/Video -->
+            <div class="project-showcase">
+                <div class="placeholder-project color-2" style="height: 500px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 1.5rem; color: #555;">[ K 線圖與分析介面展示 ]</span>
+                </div>
+            </div>
+
+            <div class="project-content-block">
+                <div class="content-section">
+                    <h3>專案動機</h3>
+                    <p>
+                        在投資決策中，數據的即時性與可視化至關重要。市面上的免費工具往往功能受限，而專業軟體又過於昂貴。因此，我開發了這個自動化分析平台，旨在提供一個客製化、自動更新且易於閱讀的股票分析環境，幫助使用者快速掌握市場趨勢。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>主要功能</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name"><strong>自動化數據抓取</strong></div>
+                            <p>使用 Python 定期串接金融 API 與爬蟲技術，自動更新每日股價、成交量與財報數據，建立完整的歷史資料庫。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>互動式 K 線圖</strong></div>
+                            <p>前端採用 JavaScript 圖表庫，繪製動態 K 線圖（Candlestick Charts），支援縮放、移動與技術指標（如 MA, RSI）疊加顯示。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>策略回測模擬</strong></div>
+                            <p>內建簡單的交易策略回測功能，使用者可設定進出場條件，系統將根據歷史數據計算預期報酬率。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>技術堆疊</h3>
+                    <div class="project-tech" style="border: none; padding-top: 0; margin-bottom: 20px;">
+                        <span>Python (Pandas, Requests)</span>
+                        <span>JavaScript (D3.js / Chart.js)</span>
+                        <span>HTML/CSS</span>
+                        <span>REST API</span>
+                    </div>
+                    <p>
+                        後端使用 Python 進行強大的數據處理與清洗，確保資料品質；前端則利用現代 Web 技術打造響應式介面。專案重點在於處理大量時間序列資料的效能優化，以及前後端資料傳輸的穩定性。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>學習成效</h3>
+                    <p>
+                        透過此專案，我深入理解了金融數據的結構與特性，並精進了資料視覺化（Data Visualization）的技巧。同時，在處理 API Rate Limit 與資料容錯機制上也累積了寶貴的實務經驗。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

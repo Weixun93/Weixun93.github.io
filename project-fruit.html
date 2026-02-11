@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>果然會辨識 | 呂韋勳 Leo</title>
+    <meta name="description" content="果然會辨識 - 畢業專題作品詳細介紹。使用 YOLOv11 與 VGG-16BN 進行遷移式學習的水果辨識系統。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ri-terminal-box-line logo-icon"></i>
+                Leo<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">首頁</a></li>
+                    <li><a href="index.html#about" class="nav-link">關於我</a></li>
+                    <li><a href="index.html#projects" class="nav-link">精選作品</a></li>
+                    <li><a href="index.html#skills" class="nav-link">技能</a></li>
+                    <li><a href="index.html#contact" class="nav-link btn-contact">聯絡我</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="ri-moon-line"></i>
+            </button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link"><i class="ri-arrow-left-line"></i> 返回作品列表</a>
+            <h1 class="project-detail-title">果然會辨識 (畢業專題)</h1>
+            <div class="project-meta">
+                <span class="tag">AI / CV</span>
+                <span class="tag">App Dev</span>
+                <span class="tag">System Integration</span>
+            </div>
+            <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
+                榮獲畢業專題最佳人氣獎。整合深度學習與行動應用，實現即時水果種類與甜度辨識。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Showcase Image/Video -->
+            <div class="project-showcase">
+                <div class="placeholder-project color-1" style="height: 500px; display: flex; align-items: center; justify-content: center;">
+                    <!-- In a real scenario, this would be a screenshot or demo video -->
+                    <span style="font-size: 1.5rem; color: #555;">[ 專案展示圖片/影片區域 ]</span>
+                </div>
+            </div>
+
+            <div class="project-content-block">
+                <div class="content-section">
+                    <h3>專案背景與目標</h3>
+                    <p>
+                        在現代農業與消費者選購水果的過程中，如何快速判斷水果的種類與品質（如甜度）一直是一個有趣的課題。本專案旨在開發一套整合系統，讓使用者透過手機鏡頭拍攝水果，即可獲得其種類資訊與預估甜度，展現 AI 在日常生活中的應用潛力。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>核心功能</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name"><strong>即時種類辨識</strong></div>
+                            <p>利用 YOLOv11 模型進行物件偵測，能快速準確地在複雜背景中框出水果位置並辨識種類。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>甜度預測分析</strong></div>
+                            <p>結合 VGG-16BN 進行遷移式學習，分析水果外觀特徵（如顏色、紋理）與甜度的關聯，提供甜度等級預測。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>行動端整合</strong></div>
+                            <p>開發 Android 應用程式，透過手機相機擷取影像，並經由 FastAPI 與後端 AI 模型進行即時通訊。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>技術架構</h3>
+                    <div class="project-tech" style="border: none; padding-top: 0; margin-bottom: 20px;">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>YOLOv11</span>
+                        <span>VGG-16BN</span>
+                        <span>FastAPI</span>
+                        <span>Android Studio (Java/Kotlin)</span>
+                    </div>
+                    <p>
+                        系統架構採用前後端分離設計。後端伺服器運行深度學習模型，負責核心的推論工作；前端 Android App 負責影像採集與結果呈現，兩者透過 RESTful API 進行資料交換，確保系統的即時性與擴充性。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>成果與反思</h3>
+                    <p>
+                        本專案在畢業專題展中獲得了「最佳人氣獎」，驗證了其應用場景的吸引力。在開發過程中，我們克服了模型在移動裝置上推論延遲的問題，並透過資料增強（Data Augmentation）提升了模型在不同光源下的泛化能力。未來可進一步結合 AR 技術，提供更直覺的互動體驗。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

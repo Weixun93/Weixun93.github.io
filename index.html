@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呂韋勳 Leo | AI / Cybersecurity</title>
+    <meta name="description" content="呂韋勳 (Leo) 的個人作品集。專注於 AI 人工智慧、資安與軟體工程。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon (for clean icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid-overlay"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="ri-terminal-box-line logo-icon"></i>
+                <span class="dot"></span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">首頁</a></li>
+                    <li><a href="#about" class="nav-link">關於我</a></li>
+                    <li><a href="#projects" class="nav-link">精選作品</a></li>
+                    <li><a href="#skills" class="nav-link">技能</a></li>
+                    <li><a href="#contact" class="nav-link btn-contact">聯絡我</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="ri-moon-line"></i>
+            </button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="ai-canvas"></canvas>
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <span class="greeting">Hello, I'm <span class="typing-text"></span><span class="cursor">|</span></span>
+                <h1 class="hero-title">AI / Cybersecurity</h1>
+                <p class="hero-subtitle">
+                    專注於人工智慧、資料分析與資訊安全。<br>
+                    具備將學術理論轉化為實務應用的能力，致力於解決實際問題並創造價值。
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">查看作品</a>
+                    <a href="#contact" class="btn btn-outline">下載履歷</a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/Weixun93" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/wei-xun-lu-9b1297299 " target="_blank"><i class="ri-linkedin-fill"></i></a>
+                    <a href="mailto:leolyu93@gmail.com"><i class="ri-mail-line"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-up delay-200">
+                <!-- Abstract Geometric Visual using CSS only -->
+                <div class="abstract-shape shape-1"></div>
+                <div class="abstract-shape shape-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-subtitle">About Me</span>
+                <h2 class="section-title">關於我</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image fade-in-up">
+                    <img src="xbg.jpg" alt="呂韋勳 Leo" class="profile-img">
+                </div>
+                <div class="about-text fade-in-up">
+                    <h3>追求卓越的技術探索者</h3>
+                    <p>
+                        我是目前就讀於<b>國立臺灣科技大學資訊管理系</b>的大四學生，<br>並已錄取<b>國立臺灣大學工程科學及海洋工程研究所</b>。
+                    </p>
+                    <p>
+                        在學期間，我展現了超越同儕的執行與研究能力。<br>大三升大四期間，我參與了 AI 隱私偵測的研究，並以<b>第二作者身分於國際 Q2 SCI 期刊發表論文</b>。這段經歷不僅加強了我的機器學習技術，更讓我對 Fine-tuning 與資訊安全、隱私保護有進一步理解。
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="ri-graduation-cap-line"></i>
+                            <div>
+                                <h4>學歷背景</h4>
+                                <p>國立臺灣大學 工程科學及海洋工程研究所 資訊組(Admitted)</p>
+                                <p style="font-size: 0.85rem; color: #666;">國立臺灣科技大學 資訊管理系 (2022 - 2026)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="ri-briefcase-line"></i>
+                            <div>
+                                <h4>工作經歷</h4>
+                                <p>臺科大資管系辦公室 行政工讀生 (Present)</p>
+                                <p style="font-size: 0.85rem; color: #666;">數理/電子學、程式 教學經驗 (3年+)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-subtitle">Selected Works</span>
+                <h2 class="section-title">精選專案</h2>
+            </div>
+
+            <div class="projects-carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Previous projects">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+                
+                <div class="projects-carousel">
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <article class="project-card fade-in-up">
+                            <div class="project-image">
+                                <div class="placeholder-project color-1"></div>
+                                <div class="project-overlay">
+                                    <a href="project-fruit.html" class="btn-view"><i class="ri-arrow-right-up-line"></i> 查看專案</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag">AI / CV</span>
+                                    <span class="tag">App Dev</span>
+                                </div>
+                                <h3 class="project-title"><a href="project-fruit.html">果然會辨識 (畢業專題)</a></h3>
+                                <p class="project-desc">
+                                    榮獲畢業專題最佳人氣獎。<br>使用 VGG-16BN 進行遷移式學習，辨識水果種類與甜度，並透過 FastAPI, Ngrok 串接 Android 應用程式。
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python (PyTorch)</span>
+                                    <span>FastAPI</span>
+                                    <span>Android Studio</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2 -->
+                        <article class="project-card fade-in-up delay-100">
+                            <div class="project-image">
+                                <div class="placeholder-project color-2"></div>
+                                <div class="project-overlay">
+                                    <a href="project-stock.html" class="btn-view"><i class="ri-arrow-right-up-line"></i> 查看專案</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag">Data Analysis</span>
+                                    <span class="tag">Web Dev</span>
+                                </div>
+                                <h3 class="project-title"><a href="project-stock.html">股票視覺化分析平台</a></h3>
+                                <p class="project-desc">
+                                    整合金融 API 的股票分析平台，提供互動式 K 棒圖表與歷史數據分析功能。<br>透過 Python 抓取數據並以網頁前端視覺化呈現。
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>JavaScript</span>
+                                    <span>Financial API</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 3 -->
+                        <article class="project-card fade-in-up delay-200">
+                            <div class="project-image">
+                                <div class="placeholder-project color-3"></div>
+                                <div class="project-overlay">
+                                    <a href="project-face.html" class="btn-view"><i class="ri-arrow-right-up-line"></i> 查看專案</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag">Computer Vision</span>
+                                    <span class="tag">System Design</span>
+                                </div>
+                                <h3 class="project-title"><a href="project-face.html">人臉辨識打卡系統</a></h3>
+                                <p class="project-desc">
+                                    基於 OpenCV 的即時人臉辨識系統。使用 Haar Cascade 偵測人臉，並結合 JSON 檔案儲存員工資料與打卡紀錄，實現自動化考勤。
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>OpenCV</span>
+                                    <span>JSON</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Project Card 4 -->
+                        <article class="project-card fade-in-up delay-200">
+                            <div class="project-image">
+                                <div class="placeholder-project color-3"></div>
+                                <div class="project-overlay">
+                                    <a href="project-face.html" class="btn-view"><i class="ri-arrow-right-up-line"></i> 查看專案</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag">Vibe Coding</span>
+                                    <span class="tag">React and Database</span>
+                                </div>
+                                <h3 class="project-title"><a href="project-face.html">汗水日記</a></h3>
+                                <p class="project-desc">
+                                    以 React 為前端、Node.js 與 Render 的 PostgreSQL 為後端的健身日記應用程式。<br>用戶可以記錄訓練內容、追蹤進度、關注好友，並透過圖表視覺化分析健身成果。
+                                </p>
+                                <div class="project-tech">
+                                    <span>Render</span>
+                                    <span>Node.js</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-btn-next" aria-label="Next projects">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-subtitle">My Expertise</span>
+                <h2 class="section-title">專業技能</h2>
+            </div>
+
+            <div class="skills-wrapper">
+                <!-- AI & Data Column -->
+                <div class="skill-category fade-in-up">
+                    <div class="skill-icon"><i class="ri-brain-line"></i></div>
+                    <h3>AI & Data Analysis</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name">Python (PyTorch / TensorFlow)</div>
+                            <div class="skill-bar"><div class="progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Machine Learning / Deep Learning</div>
+                            <div class="skill-bar"><div class="progress" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Computer Vision (OpenCV, YOLO)</div>
+                            <div class="skill-bar"><div class="progress" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Data Analysis</div>
+                            <div class="skill-bar"><div class="progress" style="width: 80%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Software Dev Column -->
+                <div class="skill-category fade-in-up delay-100">
+                    <div class="skill-icon"><i class="ri-code-box-line"></i></div>
+                    <h3>Software Development</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name">Java / Software Design</div>
+                            <div class="skill-bar"><div class="progress" style="width: 80%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Web (HTML/CSS/JS)</div>
+                            <div class="skill-bar"><div class="progress" style="width: 75%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Information Security</div>
+                            <div class="skill-bar"><div class="progress" style="width: 70%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name">Git / Version Control</div>
+                            <div class="skill-bar"><div class="progress" style="width: 80%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="honors" class="section bg-light">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-subtitle">Certifications</span>
+                <h2 class="section-title">專業證照</h2>
+            </div>
+
+            <div class="honors-grid single-column">
+                <!-- Certifications Column -->
+                <div class="honor-column fade-in-up">
+                    <div class="honor-list">
+                        <!-- Technical Certifications -->
+                        <div class="honor-item">
+                            <div class="honor-icon"><i class="ri-server-line"></i></div>
+                            <div class="honor-content">
+                                <h4>乙級電腦硬體裝修技術士</h4>
+                                <p>勞動部勞動力發展署</p>
+                            </div>
+                        </div>
+                        <div class="honor-item">
+                            <div class="honor-icon"><i class="ri-computer-line"></i></div>
+                            <div class="honor-content">
+                                <h4>丙級電腦硬體裝修技術士</h4>
+                                <p>勞動部勞動力發展署</p>
+                            </div>
+                        </div>
+
+                        <!-- Financial Certifications -->
+                        <div class="honor-item">
+                            <div class="honor-icon"><i class="ri-secure-payment-line"></i></div>
+                            <div class="honor-content">
+                                <h4>金融科技力知識檢定</h4>
+                                <p>台灣金融研訓院</p>
+                            </div>
+                        </div>
+                        <div class="honor-item">
+                            <div class="honor-icon"><i class="ri-book-read-line"></i></div>
+                            <div class="honor-content">
+                                <h4>金融市場常識與職業道德</h4>
+                                <p>台灣金融研訓院 / 證券暨期貨市場發展基金會</p>
+                            </div>
+                        </div>
+
+                        <!-- Other / AI Learning -->
+                        <div class="honor-item">
+                            <div class="honor-icon"><i class="ri-brain-line"></i></div>
+                            <div class="honor-content">
+                                <h4>機器學習課程修習 (Machine Learning)</h4>
+                                <p>Kaggle Certificates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <div class="contact-content fade-in-up">
+                <h2 class="contact-title">Let's work together!</h2>
+                <p class="contact-text">
+                    我正在尋找實習關於 <strong>資料分析師</strong>、<strong>資安工程師</strong> 或 <strong>AI 工程師</strong> 的實習與兼職機會。<br>
+                    如果您對我的研究與開發能力感興趣，歡迎隨時與我聯繫。
+                </p>
+                
+                <a href="mailto:leolyu93@gmail.com" class="btn btn-primary btn-large">
+                    <i class="ri-mail-send-line"></i> 發送郵件給我
+                </a>
+
+                <div class="contact-socials">
+                    <a href="#" class="social-item">GitHub</a>
+                    <span class="separator">/</span>
+                    <a href="#" class="social-item">LinkedIn</a>
+                    <span class="separator">/</span>
+                    <a href="#" class="social-item">Behance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
