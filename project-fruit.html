@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>果然會辨識 | 呂韋勳 Leo</title>
-    <meta name="description" content="果然會辨識 - 畢業專題作品詳細介紹。使用 YOLOv11 與 VGG-16BN 進行遷移式學習的水果辨識系統。">
+    <meta name="description" content="果然會辨識 - 畢業專題作品詳細介紹。使用 VGG-16BN 進行遷移式學習的水果辨識系統。">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
                 <span class="tag">System Integration</span>
             </div>
             <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
-                榮獲畢業專題最佳人氣獎。整合深度學習與行動應用，實現即時水果種類與甜度辨識。
+                榮獲畢業專題最佳人氣獎。整合深度學習與行動應用，實現即時水果種類與成熟度辨識。
             </p>
         </div>
     </section>
@@ -70,17 +70,14 @@
         <div class="container">
             <!-- Showcase Image/Video -->
             <div class="project-showcase">
-                <div class="placeholder-project color-1" style="height: 500px; display: flex; align-items: center; justify-content: center;">
-                    <!-- In a real scenario, this would be a screenshot or demo video -->
-                    <span style="font-size: 1.5rem; color: #555;">[ 專案展示圖片/影片區域 ]</span>
-                </div>
+                <img src="fruit.png" alt="果然會辨識展示圖" style="height: auto; width: 50%; object-fit: cover; display: block; margin: 0 auto;">
             </div>
 
             <div class="project-content-block">
                 <div class="content-section">
                     <h3>專案背景與目標</h3>
                     <p>
-                        在現代農業與消費者選購水果的過程中，如何快速判斷水果的種類與品質（如甜度）一直是一個有趣的課題。本專案旨在開發一套整合系統，讓使用者透過手機鏡頭拍攝水果，即可獲得其種類資訊與預估甜度，展現 AI 在日常生活中的應用潛力。
+                        在現代農業與消費者選購水果的過程中，如何快速判斷水果的種類與品質（如成熟度）一直是一個有趣的課題。本專案旨在開發一套整合系統，讓使用者透過手機鏡頭拍攝水果，即可獲得其種類資訊與預估成熟度，展現 AI 在日常生活中的應用潛力。
                     </p>
                 </div>
 
@@ -89,11 +86,11 @@
                     <ul class="skill-list">
                         <li>
                             <div class="skill-name"><strong>即時種類辨識</strong></div>
-                            <p>利用 YOLOv11 模型進行物件偵測，能快速準確地在複雜背景中框出水果位置並辨識種類。</p>
+                            <p>利用預訓練模型進行物件偵測，能快速準確地在複雜背景中框出水果位置並辨識種類。</p>
                         </li>
                         <li>
-                            <div class="skill-name"><strong>甜度預測分析</strong></div>
-                            <p>結合 VGG-16BN 進行遷移式學習，分析水果外觀特徵（如顏色、紋理）與甜度的關聯，提供甜度等級預測。</p>
+                            <div class="skill-name"><strong>成熟度預測分析</strong></div>
+                            <p>結合 VGG-16BN 進行遷移式學習，分析水果外觀特徵（如顏色、紋理）與成熟度的關聯，提供成熟度等級預測。</p>
                         </li>
                         <li>
                             <div class="skill-name"><strong>行動端整合</strong></div>
@@ -120,7 +117,7 @@
                 <div class="content-section">
                     <h3>成果與反思</h3>
                     <p>
-                        本專案在畢業專題展中獲得了「最佳人氣獎」，驗證了其應用場景的吸引力。在開發過程中，我們克服了模型在移動裝置上推論延遲的問題，並透過資料增強（Data Augmentation）提升了模型在不同光源下的泛化能力。未來可進一步結合 AR 技術，提供更直覺的互動體驗。
+                        本專案在畢業專題展中獲得了「最佳人氣獎」，驗證了其應用場景的吸引力。在開發過程中，我們克服了模型在移動裝置上推論延遲的問題，並透過資料增強（Data Augmentation）、Over Sampling提升了模型在不同光源下的泛化能力。未來可進一步結合 AR 技術，提供更直覺的互動體驗。
                     </p>
                 </div>
             </div>

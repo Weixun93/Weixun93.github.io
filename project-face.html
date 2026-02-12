@@ -70,8 +70,9 @@
         <div class="container">
             <!-- Showcase Image/Video -->
             <div class="project-showcase">
-                <div class="placeholder-project color-3" style="height: 500px; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-size: 1.5rem; color: #555;">[ 辨識介面與後台管理展示 ]</span>
+                <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                    <img src="face_1.png" alt="人臉資料蒐集" style="width: 45%; height: auto; object-fit: cover;">
+                    <img src="face_2.png" alt="後台打卡展示" style="width: 45%; height: auto; object-fit: cover;">
                 </div>
             </div>
 
@@ -92,7 +93,7 @@
                         </li>
                         <li>
                             <div class="skill-name"><strong>自動化考勤記錄</strong></div>
-                            <p>識別成功後，系統自動將員工 ID、姓名與打卡時間寫入 JSON 或 CSV 格式的資料庫，方便後續匯出與薪資計算。</p>
+                            <p>識別成功後，系統自動將員工 ID、姓名與打卡時間寫入 JSON 格式的檔案，方便後續匯出與時程計算薪資。</p>
                         </li>
                         <li>
                             <div class="skill-name"><strong>防偽機制（基礎）</strong></div>
@@ -107,7 +108,7 @@
                         <span>Python</span>
                         <span>OpenCV</span>
                         <span>NumPy</span>
-                        <span>JSON / CSV</span>
+                        <span>JSON</span>
                     </div>
                     <p>
                         核心演算法基於 OpenCV 函式庫開發。系統流程包含：影像前處理（灰階化、直方圖均化）、特徵提取、模型訓練與即時推論。資料儲存採用輕量化的 JSON 格式，便於系統移植與快速部署。
