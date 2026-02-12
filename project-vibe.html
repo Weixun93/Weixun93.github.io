@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汗水日記 | 呂韋勳 Leo</title>
+    <meta name="description" content="汗水日記 - 以 React 為前端的健身日記應用程式。記錄訓練、追蹤進度、視覺化分析健身成果。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ri-terminal-box-line logo-icon"></i>
+                Leo<span class="dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">首頁</a></li>
+                    <li><a href="index.html#about" class="nav-link">關於我</a></li>
+                    <li><a href="index.html#projects" class="nav-link">精選作品</a></li>
+                    <li><a href="index.html#skills" class="nav-link">技能</a></li>
+                    <li><a href="index.html#contact" class="nav-link btn-contact">聯絡我</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="ri-moon-line"></i>
+            </button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link"><i class="ri-arrow-left-line"></i> 返回作品列表</a>
+            <h1 class="project-detail-title">汗水日記</h1>
+            <div class="project-meta">
+                <span class="tag">Vibe Coding</span>
+                <span class="tag">React and Database</span>
+                <span class="tag">Full-Stack</span>
+            </div>
+            <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
+                以 React 為前端的健身日記應用程式，用戶可以記錄訓練內容、追蹤進度，並透過圖表視覺化分析健身成果。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Showcase Image/Video -->
+            <div class="project-showcase">
+                <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                    <img src="vibe_1.png" alt="汗水日記介面" style="width: 45%; height: auto; object-fit: cover;">
+                    <img src="vibe_2.png" alt="健身數據視覺化" style="width: 45%; height: auto; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="project-content-block">
+                <div class="content-section">
+                    <h3>專案簡介</h3>
+                    <p>
+                        汗水日記是一款專為運動分享者設計的應用程式，期望大家可以持之以恆激勵彼此。用戶可以輕鬆記錄每日的訓練內容、時間、難易度與重複次數，並追蹤長期運動次數與進度。系統提供個人化的健身建議，並支援好友互動功能，讓健身不再孤單。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>功能特色</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name"><strong>訓練記錄與追蹤</strong></div>
+                            <p>用戶可以記錄各項運動的詳細數據，包括重量、時間、重複次數，並自動追蹤達成日期與進度。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>數據視覺化分析</strong></div>
+                            <p>透過圖表展示運動成果，並提供個人化建議，可以透過 AI 問答機器人得到關於訓練的建議與指導。</p>
+                        </li>
+                        <li>
+                            <div class="skill-name"><strong>社交互動功能</strong></div>
+                            <p>用戶可以關注好友、分享訓練成果，並互相鼓勵，提升健身動力。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>技術架構</h3>
+                    <div class="project-tech" style="border: none; padding-top: 0; margin-bottom: 20px;">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Render</span>
+                    </div>
+                    <p>
+                        前端採用 React 框架開發，提供流暢的用戶體驗。後端使用 Node.js 與 Express 處理 API 請求，資料庫採用 PostgreSQL 儲存用戶數據與訓練記錄。應用程式部署在 Render 平台上，確保高可用性。
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>開發挑戰與解決</h3>
+                    <p>
+                        在開發過程中，最大的挑戰在於數據同步與用戶體驗優化。透過實時數據更新與優化的 UI 設計，確保用戶在記錄訓練時的流暢性。此外，也注重資料安全，採用加密儲存用戶個人資訊。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
