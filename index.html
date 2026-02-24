@@ -32,6 +32,7 @@
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">首頁</a></li>
                     <li><a href="#about" class="nav-link">關於我</a></li>
+                    <li><a href="#paper" class="nav-link">發表刊物</a></li>
                     <li><a href="#projects" class="nav-link">精選作品</a></li>
                     <li><a href="#skills" class="nav-link">技能</a></li>
                     <li><a href="#contact" class="nav-link btn-contact">聯絡我</a></li>
@@ -121,6 +122,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper Section -->
+    <section id="paper" class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-subtitle">Research Papers</span>
+                <h2 class="section-title">刊物</h2>
+            </div>
+
+            <div class="papers-grid">
+                <!-- Paper Card 1 -->
+                <article class="project-card paper-card fade-in-up">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">AI Privacy</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">Dynamic Visual Privacy Governance Using Graph Convolutional Networks and Federated Reinforcement Learning</h3>
+                        <p class="project-desc">
+                            The proliferation of image sharing on social media poses significant privacy risks. Although some previous works have proposed to detect privacy attributes in image sharing, they suffer from the following shortcomings: (1) reliance only on legacy architectures, (2) failure to model the label correlations (i.e., semantic dependencies and co-occurrence patterns among privacy attributes) between privacy attributes, and (3) adoption of static, one-size-fits-all user preference models. To address these, we propose a comprehensive framework for visual privacy protection. First, we establish a new state-of-the-art (SOTA) architecture using modern vision backbones. Second, we introduce Graph Convolutional Networks (GCN) as a classifier head to counter the failure to model label correlations. Third, to replace static user models, we design a dynamic personalization module using Federated Learning (FL) for privacy preservation and Reinforcement Learning (RL) to continuously adapt to individual user preferences. Experiments on the VISPR dataset demonstrate that our approach can outperform the previous work by a substantial margin of 6% in mAP (52.88% vs. 46.88%) and improve the Overall F1-score by 10% (0.770 vs. 0.700). This provides more meaningful and personalized privacy recommendations, setting a new standard for user-centric privacy protection systems.<br>
+                            <b>Keywords: visual privacy protection; personalized privacy; image recognition; graph convolutional networks; federated learning; reinforcement learning</b>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://doi.org/10.3390/electronics14193774" target="_blank" class="btn btn-primary">查看論文</a>
+                            <span class="btn btn-outline" style="opacity: 0.5; cursor: not-allowed;">下載 PDF</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 可以添加更多論文卡片 -->
             </div>
         </div>
     </section>

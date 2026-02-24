@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (function initProjectsCarousel() {
         const carousel = document.querySelector('.projects-carousel');
         const grid = document.querySelector('.projects-grid');
-        const cards = document.querySelectorAll('.project-card');
+        const cards = carousel.querySelectorAll('.project-card');
         const prevBtn = document.querySelector('.carousel-btn-prev');
         const nextBtn = document.querySelector('.carousel-btn-next');
         
@@ -331,8 +331,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update carousel position
         function updateCarousel() {
+            // Use a more reliable way to calculate card width and gap
+            const computedStyle = getComputedStyle(cards[0]);
             const cardWidth = cards[0].offsetWidth;
-            const gap = parseInt(getComputedStyle(grid).gap) || 32;
+            const gapValue = getComputedStyle(grid).gap;
+            let gap = 32; // default fallback
+            
+            if (gapValue.includes('rem')) {
+                gap = parseFloat(gapValue) * parseFloat(getComputedStyle(document.documentElement).fontSize);
+            } else if (gapValue.includes('px')) {
+                gap = parseFloat(gapValue);
+            }
+            
             const offset = -(currentIndex * (cardWidth + gap));
             grid.style.transform = `translateX(${offset}px)`;
             
@@ -340,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex >= cards.length - cardsPerView;
             
-            console.log(`Current index: ${currentIndex}, Cards per view: ${cardsPerView}`);
+            console.log(`Current index: ${currentIndex}, Cards per view: ${cardsPerView}, Card width: ${cardWidth}, Gap: ${gap}`);
         }
         
         // Navigation handlers
@@ -356,6 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', (e) => {
             e.preventDefault();
             console.log('Next button clicked');
+            // Only move if there are enough cards to fill the next view
             if (currentIndex < cards.length - cardsPerView) {
                 currentIndex++;
                 updateCarousel();

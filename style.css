@@ -488,6 +488,12 @@ body.dark-mode .shape-1 {
     gap: 30px;
 }
 
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
 .project-card {
     background-color: var(--bg-light);
     border-radius: var(--border-radius);
@@ -595,6 +601,20 @@ body.dark-mode .project-tech {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Paper cards without images */
+.paper-card {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Projects Carousel Wrapper */
 .projects-carousel-wrapper {
     position: relative;
@@ -672,6 +692,10 @@ body.dark-mode .project-tech {
     
     .projects-carousel-wrapper {
         padding: 0 50px;
+    }
+
+    .papers-grid {
+        grid-template-columns: 1fr;
     }
 }
 
